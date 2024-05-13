@@ -48,16 +48,6 @@ const data = [
     color: "#f9d051",
     border: "2px dotted #f9d051",
   },
-  // {
-  //   title: "Note",
-  //   description:
-  //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae architecto nesciunt error praesentium facilis, ipsa assumenda cumque deleniti eum consequatur!",
-  // },
-  // {
-  //   title: "Something went wrong",
-  //   description:
-  //     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae architecto nesciunt error praesentium facilis, ipsa assumenda cumque deleniti eum consequatur!",
-  // },
 ];
 
 function App() {
