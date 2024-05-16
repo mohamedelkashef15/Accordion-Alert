@@ -1,31 +1,66 @@
-$borderColor: rgba(255, 25, 0, 0.322);
-$errorBg: rgb(192 29 29/15%);
+// defulat
+$defualtBorder: #c8c8c8;
+$defualtBackground: #151617;
+$defualtColor: #c8c8c8;
+
+// Info
+$infoBorder: #bcc0ff;
+$infoBackground: transparent;
+$infoColor: #bcc0ff;
+
+// Sucess
+$sucessBorder: #75c265;
+$sucessBackground: #1f1e07;
+$sucessColor: #75c265;
+
+// Error
+$errorBorder: rgba(255, 25, 0, 0.322);
+$errorBackground: rgb(192 29 29/15%);
 $errorColor: #ef8d8dfa;
-.alert-danger {
-  // border: 2px dotted $borderColor;
-  margin: 20px;
-  padding: 1.5rem;
-  border-radius: 10px;
 
-  .alert-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    .header-title {
+// Warning
+$warningBorder: #f9d051;
+$warningBackground: #090703;
+$warningColor: #f9d051;
+
+@mixin alert($name, $border, $background, $color) {
+  .#{$name} {
+    // border: 2px dotted $borderColor;
+    margin: 20px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px dotted $border;
+    background-color: $background;
+    color: $color;
+    // font-size: $font;
+
+    .alert-header {
       display: flex;
-    }
-    .icon {
-      size: 20px;
-      margin-right: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .header-title {
+        display: flex;
+      }
+      .icon {
+        size: 20px;
+        margin-right: 10px;
+      }
+
+      .close {
+        cursor: pointer;
+      }
     }
 
-    .close {
-      cursor: pointer;
+    p {
+      font-size: 14px;
     }
-  }
-
-  p {
-    font-size: 14px;
   }
 }
+@include alert("alert-defualt", $defualtBorder, $defualtBackground, $defualtColor);
+
+@include alert("alert-info", $infoBorder, $infoBackground, $infoColor);
+
+@include alert("alert-sucess", $sucessBorder, $sucessBackground, $sucessColor);
+@include alert("alert-error", $errorBorder, $errorBackground, $errorColor);
+@include alert("alert-warning", $warningBorder, $warningBackground, $warningColor);

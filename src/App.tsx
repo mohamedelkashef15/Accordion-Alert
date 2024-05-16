@@ -4,49 +4,39 @@ import "./global.scss";
 
 const data = [
   {
+    name: "alert-defualt",
     icon: <Bell />,
     title: "Upgrade your plan",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae architecto nesciunt error praesentium facilis, ipsa assumenda cumque deleniti eum consequatur!",
-    bgColor: "#151617",
-    color: "#C8C8C8",
-    border: "2px dotted #C8C8C8",
   },
   {
+    name: "alert-info",
     icon: <Info />,
     title: "Note",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae architecto nesciunt error praesentium facilis, ipsa assumenda cumque deleniti eum consequatur!",
-    bgColor: "transparent",
-    color: "#bcc0ff",
-    border: "2px dotted #bcc0ff",
   },
   {
+    name: "alert-sucess",
     icon: <CheckCheck />,
     title: "Your order has been processedg",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae architecto nesciunt error praesentium facilis, ipsa assumenda cumque deleniti eum consequatur!",
-    bgColor: "#1f1e07",
-    color: "#75c265",
-    border: "2px dotted #75c265",
   },
   {
+    name: "alert-error",
     icon: <Ban />,
     title: "Something went wrong",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae architecto nesciunt error praesentium facilis, ipsa assumenda cumque deleniti eum consequatur!",
-    bgColor: "rgb(192 29 29/15%)",
-    color: "#ef8d8dfa",
-    border: "2px dotted rgba(255, 25, 0, 0.322)",
   },
   {
+    name: "alert-warning",
     icon: <TriangleAlert />,
     title: "Tips & Tricks",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae architecto nesciunt error praesentium facilis, ipsa assumenda cumque deleniti eum consequatur!",
-    bgColor: "#090703",
-    color: "#f9d051",
-    border: "2px dotted #f9d051",
   },
 ];
 
@@ -57,14 +47,7 @@ function App() {
         <div>
           {data.map((ele) => {
             return (
-              <Alert
-                icon={ele.icon}
-                title={ele.title}
-                description={ele.description}
-                bgColor={ele.bgColor}
-                color={ele.color}
-                border={ele.border}
-              />
+              <Alert name={ele.name} icon={ele.icon} title={ele.title} description={ele.description} key={ele.name} />
             );
           })}
         </div>

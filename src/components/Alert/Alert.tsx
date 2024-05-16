@@ -3,17 +3,15 @@ import "./alert.scss";
 import { X } from "lucide-react";
 
 interface IProps {
+  name: string;
   icon: ReactNode;
   title: string;
   description: string;
-  bgColor: string;
-  color: string;
-  border: string;
 }
 
 const Alert = (props: IProps) => {
   return (
-    <div className="alert-danger" style={{ backgroundColor: props.bgColor, color: props.color, border: props.border }}>
+    <div className={props.name}>
       <div className="alert-header">
         <div className="header-title">
           <span className="icon"> {props.icon}</span>
