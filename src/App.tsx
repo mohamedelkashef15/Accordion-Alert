@@ -44,13 +44,11 @@ function App() {
   return (
     <main>
       <div className="container">
-        <div>
-          {data.map((ele) => {
-            return (
-              <Alert name={ele.name} icon={ele.icon} title={ele.title} description={ele.description} key={ele.name} />
-            );
-          })}
-        </div>
+        {data.map((ele) => {
+          return (
+            <Alert name={ele.name} icon={ele.icon} title={ele.title} description={ele.description} key={ele.name} />
+          );
+        })}
       </div>
     </main>
   );
